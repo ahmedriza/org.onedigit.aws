@@ -15,17 +15,11 @@ This will create a fat jar in the `target` directory.
 java -jar target/aws.secrets-1.0-SNAPSHOT.jar
 ```
 
-Example output
-
-```
-{"MINIO_ROOT_USER":"custom_access_key","MINIO_ROOT_PASSWORD":"custom_secret_key"}
-```
-
 This is in json format.  We can use `jq` to extract values, e.g.
 
 ```shell
 #!/bin/bash
-SECRETS=`java -jar target/aws.secrets-1.0-SNAPSHOT.jar`
+SECRETS=`java -jar target/aws.tools-1.0-SNAPSHOT.jar`
 export MINIO_ROOT_USER=`echo $SECRETS | jq -r '.MINIO_ROOT_USER'`
 export MINIO_ROOT_PASSWORD=`echo $SECRETS  | jq -r '.MINIO_ROOT_PASSWORD'`
 ```
