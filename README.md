@@ -19,7 +19,7 @@ This is in json format.  We can use `jq` to extract values, e.g.
 
 ```shell
 #!/bin/bash
-SECRETS=`java -jar target/aws.tools-1.0-SNAPSHOT.jar`
+SECRETS=`java -jar target/aws.tools-1.0-SNAPSHOT.jar org.onedigit.aws.secrets.SecretsHelper`
 export MINIO_ROOT_USER=`echo $SECRETS | jq -r '.MINIO_ROOT_USER'`
 export MINIO_ROOT_PASSWORD=`echo $SECRETS  | jq -r '.MINIO_ROOT_PASSWORD'`
 ```
