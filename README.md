@@ -15,7 +15,7 @@ This will create a fat jar in the `target` directory.
 java -jar target/aws.secrets-1.0-SNAPSHOT.jar
 ```
 
-This is in json format.  We can use `jq` to extract values, e.g.
+This is in json format.  We can use `jq` to extract values, e.g. 
 
 ```shell
 #!/bin/bash
