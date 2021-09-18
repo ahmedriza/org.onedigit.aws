@@ -3,6 +3,10 @@ package org.onedigit.aws.secrets;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSCredentialsProvider;
 
+/**
+ * An {@link AWSCredentialsProvider} that can be used in HDFS configurations to provide credentials to access
+ * Amazon S3 either directly or through a MinIO Gateway
+ */
 public class CredentialsProvider implements AWSCredentialsProvider {
 
     /**
